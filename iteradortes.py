@@ -25,6 +25,17 @@ odd_itter = iter(range(1,limit+1,2))
 for num in odd_itter:
     print(num)
 
+
+#Fibonacci
+def fibonacci(limit):
+    a,b = 0,1
+    while a < limit:
+        yield a
+        a,b = b, a+b
+
+for num in fibonacci(10):
+    print('fibonacci',num)
+
 # Iterar en cadenas
 #Creando la cadena
 text = "Hola mundo"
